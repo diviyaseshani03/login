@@ -1,0 +1,99 @@
+
+    body{
+      height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("bg1.jpg");
+      opacity: 0.98;
+    }
+
+    .box{
+      position: relative;
+      width:20%;
+      height: 75%;
+      background-color: white;
+      overflow: hidden;
+      opacity: 0.9;
+    }
+    .signup{
+              width:100%;
+              height: 90%;
+              background-color: white;
+              padding: 30px 30px 30px 30px;
+              position: absolute;
+              margin-left:101%;
+              bottom: 0px;
+              transition: 1s;
+            }
+
+
+    .login{
+
+          width:100%;
+          height: 90%;
+          background-color:white;
+          padding: 30px 30px 30px 30px;
+          position: absolute;
+          margin-left:0%;
+          bottom: 0px;
+          transition: 1s;
+
+        }
+
+    .form-group{
+     width:100%;
+     height: 17%;
+
+    }
+
+  .signup .form-group{
+       width:100%;
+       height: 17%;
+
+      }
+
+  .tog-btn{
+    -webkit-appearance: none;
+    top: 2%;
+    left:14.5%;
+    height: 7%;
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 30px;
+    position: absolute;
+  }
+
+
+    .tog-btn:before{
+      position: absolute;
+      height: 103%;
+      width: 50%;
+      /* border: 2px solid black; */
+      content:'Login' ;
+      font-weight: bold;
+      color: white;
+      padding-top:3% ;
+      left:0;
+      text-align: center;
+      display: grid;
+      background: linear-gradient(30deg,blue,white);
+      border: none !important;
+      border-radius: 20px;
+      transition: 1s;
+
+    }
+
+    .tog-btn:checked:before{
+      left:50%;
+      content: 'Signup';
+      transition: 1s;
+    }
+
+    .tog-btn:checked + .login{
+      left: -101%;
+    }
+
+    .tog-btn:checked + .login + .signup{
+      right: 0%;
+    }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Login and signup form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="box">
+  <input type="checkbox" name="" class="tog-btn">
+
+    <div class="login">
+      <form action="log.php" method="POST">
+
+      <div class="form-group">
+          <label for="mailid">Email id</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter Email-id">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+      </div>
+
+
+        <label  for="t&c"><small id="t&c" class="form-text text-muted"><a href=""> Forgot password?</a></small>
+
+      <button type="submit" class="btn btn-primary" style="margin-left:85% ; margin-top: 15%; border-radius: 10px;
+      background: linear-gradient(30deg,blue,white); font-weight: bold; font-size: 14px;">Login</button>
+    </form>
+
+    </div>
+
+
+        <div class="signup">
+          <form action="register.php" method="POST">
+
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input type="name" class="form-control" name="name" aria-describedby="nameHelp" placeholder="Enter Name" required>
+      </div>
+
+
+      <div class="form-group">
+          <label for="mailid">Email id</label>
+          <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter Email-id" required>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="exampleInputPassword1" >Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+      </div>
+ -->
+
+
+      <div class="form-group">
+          <label for="pass"><i class="zmdi zmdi-lock"></i>Password</label><br>
+          <input type="password" name="password" id="Password" placeholder="Password"  style="width:100% ;padding:5px 5px; border-radius:3px;" required/>
+      </div>
+
+
+
+      <div class="form-group">
+          <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i> Re-type Password</label><br>
+          <input type="password" name="confirm_password" id="Confirm Password" placeholder="Repeat your password" onKeyUp="checkInput()" style="width:100% ;padding:5px 5px; border-radius:3px;" required/ >
+          <script>
+             var pass = document.getElementById('Password');
+             var myTextBox = document.getElementById('Confirm Password');
+
+             function checkInput() {
+                 var value = myTextBox.value;
+                 var value1 = pass.value;
+               if (value!=value1) {
+                 myTextBox.style.borderWidth = "5px";
+                 myTextBox.style.borderStyle = "solid";
+
+                 myTextBox.style.borderColor = "Red";
+
+               } else {
+                 myTextBox.style.borderWidth = "5px";
+                 myTextBox.style.borderStyle = "solid";
+
+                 myTextBox.style.borderColor = "green";
+                    }
+             }
+
+
+
+              </script>
+
+
+      </div>
+
+
+
+
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+        <label class="custom-control-label" for="customCheck1"><small id="t&c" class="form-text text-muted"> Accept the terms and conditions</small></label>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-left:30% ;margin-top: 7%;
+      background: linear-gradient(30deg,blue,white); font-weight: bold; font-size: 14px;">Signup</button>
+    </form>
+    </div>
+  </div>
+</body>
+</html>
